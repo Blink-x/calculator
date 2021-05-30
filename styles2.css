@@ -1,0 +1,121 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Cousine', monospace;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    height: 100%;
+    margin: 0;
+    background: #4AC29A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BDFFF3, #4AC29A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BDFFF3, #4AC29A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.calculator-grid {
+    width: 450px;
+    background-color:rgba(143, 134, 201, 0.5);
+    border-radius: 10px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 150px auto auto;
+    height: 700px;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    box-shadow: 2px 3px 4px black;
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 2px solid white;
+    outline: none;
+    background-color: (225, 225, 225, .85);
+}
+
+.calculator-grid > button:hover {
+    background-color: rgb(246, 229, 197);
+    font-size: 2.5rem;
+    transition: 0.3s ease-in;
+    color: rgb(136, 136, 136);
+}
+
+.calculator-grid > button:active
+{
+    background-color:rgb(245, 210, 146);
+    font-size: 3rem;
+    color: lightgreen;
+}
+#allClearBtn {
+    border-top-left-radius: 3px;
+}
+
+#allClearBtn:hover {
+    background-color: rgb(251, 212, 218);
+    transition: 0.3s ease-in;
+}
+
+#divideBtn {
+    border-top-right-radius: 3px;
+}
+
+#decimalBtn {
+    border-bottom-left-radius: 9px;
+    box-shadow: 2px 2px 2px black;
+}
+
+#zeroBtn {
+    box-shadow: 2px 2px 2px black;
+ 
+}
+
+#equalsBtn {
+    border-bottom-right-radius: 9px;
+    box-shadow: 0 4px 2px -2px black;}
+
+#equalsBtn:hover {
+    background-color: rgb(172, 242, 172);
+    transition: 0.3s ease-in;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+button {
+    height: 100%;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: darkslategrey;
+    opacity: 0.95;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    box-shadow: inset 2px 3px 5px 0px rgba(0,0,0,0.8);
+}
+
+.output .previous-operand {
+    color: rgba(240, 240, 240, 0.87);
+    font-size: 1.5rem;
+    text-shadow: 1px 2px 3px lightgreen;    
+}
+
+.output .current-operand {
+    color:rgba(255,255,255, 0.9);
+    font-size: 2.5rem;  
+    text-shadow: 1px 2px 3px lightgreen;    
+  
+}
+
